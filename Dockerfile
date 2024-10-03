@@ -3,7 +3,7 @@ RUN git clone https://github.com/anitha233/spring-petclinic-oct24.git
 RUN cd spring-petclinic-oct24 && mvn clean package
 
 FROM amazoncorretto:17-alpine3.17-jdk
-RUN adduser -d spc
+RUN adduser -D spc
 RUN mkdir spc1 && chown spc /spc1
 USER spc
 WORKDIR /spc1
